@@ -24,6 +24,21 @@
       }
     </style>
   </head>
+
+  <!-- modal -->
+  <!-- The button to open modal -->
+
+  <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+  <div class="modal" role="dialog">
+    <div class="modal-box text-center">
+      <h3 class="font-bold text-2xl">Congratulation!</h3>
+      <p class="py-4">You Purchase the Product</p>
+      <div class="modal-action text-center">
+        <label for="my_modal_6" class="btn bg-orange-400">Close!</label>
+      </div>
+    </div>
+  </div>
+
   <body class="font-poppins bg-slate-100">
     <h1 class="font-bold text-3xl py-3 px-8">Kitchenware</h1>
 
@@ -117,7 +132,9 @@
               </div>
               <div class="card-actions flex flex-col items-center">
                 <h2 class="text-2xl font-semibold">Steamer basket</h2>
-                <p class="font-bold text-xl text-orange-400">$ 38.00</p>
+                <p class="font-bold text-xl text-orange-400">
+                  <span>$ 38.00</span>
+                </p>
               </div>
             </div>
           </div>
@@ -208,7 +225,9 @@
               </div>
               <div class="card-actions flex flex-col items-center">
                 <h2 class="text-2xl font-semibold">Grill pan</h2>
-                <p class="font-bold text-xl text-orange-400">$ 22.00</p>
+                <p class="font-bold text-xl text-orange-400">
+                  <span>$ 22.00</span>
+                </p>
               </div>
             </div>
           </div>
@@ -299,7 +318,9 @@
               </div>
               <div class="card-actions flex flex-col items-center">
                 <h2 class="text-2xl font-semibold">Rice cooke</h2>
-                <p class="font-bold text-xl text-orange-400">$ 41.00</p>
+                <p class="font-bold text-xl text-orange-400">
+                  <span>$ 41.00</span>
+                </p>
               </div>
             </div>
           </div>
@@ -390,7 +411,9 @@
               </div>
               <div class="card-actions flex flex-col items-center">
                 <h2 class="text-2xl font-semibold">Tablespoon</h2>
-                <p class="font-bold text-xl text-orange-400">$ 23.00</p>
+                <p class="font-bold text-xl text-orange-400">
+                  <span>$ 23.00</span>
+                </p>
               </div>
             </div>
           </div>
@@ -481,7 +504,9 @@
               </div>
               <div class="card-actions flex flex-col items-center">
                 <h2 class="text-2xl font-semibold">Pressure cooker</h2>
-                <p class="font-bold text-xl text-orange-400">$ 21.00</p>
+                <p class="font-bold text-xl text-orange-400">
+                  <span>$ 21.00</span>
+                </p>
               </div>
             </div>
           </div>
@@ -572,7 +597,9 @@
               </div>
               <div class="card-actions flex flex-col items-center">
                 <h2 class="text-2xl font-semibold">Griddle</h2>
-                <p class="font-bold text-xl text-orange-400">$ 31.00</p>
+                <p class="font-bold text-xl text-orange-400">
+                  <span>$ 31.00</span>
+                </p>
               </div>
             </div>
           </div>
@@ -584,21 +611,33 @@
           <h1 class="font-bold text-xl py-2">Have Coupon ?</h1>
           <div class="join">
             <input
+              id="discount-input"
               class="input input-bordered join-item"
               placeholder="Discount"
             />
-            <button class="btn join-item rounded-r-full bg-orange-400">
+            <button
+              id="apply-btn"
+              class="btn join-item rounded-r-full bg-orange-400"
+            >
               Apply
             </button>
           </div>
         </div>
 
         <div class="flex flex-col rounded-xl p-5 mt-5 bg-white">
+          <div id="title-container" class="py-2"></div>
           <hr />
-          <h1 class="font-bold text-xl py-2">Total Price: $</h1>
-          <h1 class="font-bold text-xl py-2">Discount: $</h1>
-          <h1 class="font-bold text-xl py-2">Total: $</h1>
-          <button class="btn bg-orange-400">Make Purches</button>
+          <h1 class="font-bold text-xl py-2">
+            Total Price: $ <span id="total-price">0</span>
+          </h1>
+          <h1 class="font-bold text-xl py-2">
+            Discount: $ <span id="discount-price">0</span>
+          </h1>
+          <h1 class="font-bold text-xl py-2">
+            Total: $ <span id="total-discount-price">0</span>
+          </h1>
+          <!-- <button class="btn bg-orange-400">Make Purches</button> -->
+          <label for="my_modal_6" class="btn bg-orange-400">Make Purches</label>
         </div>
       </div>
     </div>
